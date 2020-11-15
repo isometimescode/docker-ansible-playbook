@@ -1,4 +1,4 @@
-name: Docker
+name: Docker Publish
 
 on:
   push:
@@ -11,24 +11,12 @@ on:
       - v*
 
 env:
-  IMAGE_NAME: isometimescode/ansible-playbook
+  IMAGE_NAMESPACE: isometimescode
+  IMAGE_NAME: ansible-playbook
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run build
-        run: docker build . --file Dockerfile
-
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
-  push:
-    # Ensure build job passes before pushing image.
-    needs: build
-
+  push_gh:
+    name: Push to GitHub Packages
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
