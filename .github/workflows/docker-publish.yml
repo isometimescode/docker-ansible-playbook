@@ -43,7 +43,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            $IMAGE_NAME:latest
-            $IMAGE_NAME:$TAG_VERSION
-            ghcr.io/$IMAGE_NAME:latest
-            ghcr.io/$IMAGE_NAME:$TAG_VERSION
+            ${{ IMAGE_NAME }}:latest
+            ${{ IMAGE_NAME }}:${{ TAG_VERSION }}
+            ghcr.io/${{ IMAGE_NAME }}:latest
+            ghcr.io/${{ IMAGE_NAME }}:${{ TAG_VERSION }}
