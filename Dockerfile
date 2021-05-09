@@ -4,7 +4,7 @@
 FROM python:3.9-slim-buster
 LABEL maintainer="isometimescode@users.noreply.github.com"
 
-ARG ANSIBLE_VERSION=2.10.3
+ARG ANSIBLE_VERSION=3.3.0
 ARG PLAYBOOK_DIR=/playbook
 ENV ANSIBLE_CONFIG="${PLAYBOOK_DIR}/ansible.cfg"
 
@@ -15,6 +15,7 @@ ENV ANSIBLE_CONFIG="${PLAYBOOK_DIR}/ansible.cfg"
 RUN DEBIAN_FRONTEND="noninteractive" && \
   echo "********* Install Packages *********" && \
   apt-get update && apt-get install -y --no-install-recommends sshpass ssh-client && \
+  python -m pip install --upgrade pip && \
   python -m pip install --user --no-cache-dir ansible==$ANSIBLE_VERSION && \
   echo "********* Clean Up *********" && \
   apt-get clean && \

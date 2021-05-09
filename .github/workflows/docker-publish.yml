@@ -7,7 +7,7 @@ on:
 
 env:
   IMAGE_NAME: isometimescode/ansible-playbook
-  TAG_VERSION: 2.10.3
+  TAG_VERSION: 3.3.0
 
 jobs:
   multi-registries:

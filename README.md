@@ -25,7 +25,7 @@ docker run -it --rm -v $(pwd)/my-local-playbook:/playbook isometimescode/ansible
 
 | Build Arguments | Default Value |
 | --- | --- |
-| `ANSIBLE_VERSION` | `2.10.3` |
+| `ANSIBLE_VERSION` | `3.3.0` |
 | `PLAYBOOK_DIR` | `/playbook` |
 
 The environment variable `ANSIBLE_CONFIG` is set with the default value of `$PLAYBOOK_DIR/ansible.cfg` e.g. `/playbook/ansible.cfg`.
