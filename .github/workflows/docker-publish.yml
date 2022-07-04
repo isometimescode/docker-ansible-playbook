@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: isometimescode/ansible-playbook
+  IMAGE_NAME: ansible-playbook
   TAG_VERSION: 6.0.0
 
 jobs:
@@ -42,7 +42,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
-            ghcr.io/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
+            ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
+            ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
+            ghcr.io/${{ github.github_repository }}/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ github.github_repository }}/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
