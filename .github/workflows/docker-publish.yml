@@ -44,5 +44,5 @@ jobs:
           tags: |
             ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
             ${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
-            ghcr.io/${{ github.github_repository }}/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ github.github_repository }}/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
+            ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}:${{ env.TAG_VERSION }}
