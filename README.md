@@ -1,6 +1,6 @@
 # Ansible Playbook
 
-This installs [Ansible](https://www.ansible.com/) in a basic Debian Buster Python 3.9 image.
+This installs [Ansible](https://www.ansible.com/) in a basic Debian Bullseye Python 3.10 image.
 
 ## Usage Examples
 
@@ -25,7 +25,7 @@ docker run -it --rm -v $(pwd)/my-local-playbook:/playbook isometimescode/ansible
 
 | Build Arguments | Default Value |
 | --- | --- |
-| `ANSIBLE_VERSION` | `3.3.0` |
+| `ANSIBLE_VERSION` | `6.0.0` |
 | `PLAYBOOK_DIR` | `/playbook` |
 
 The environment variable `ANSIBLE_CONFIG` is set with the default value of `$PLAYBOOK_DIR/ansible.cfg` e.g. `/playbook/ansible.cfg`.

@@ -1,10 +1,10 @@
 # Use a recent version of Python & Debian
 # https://hub.docker.com/_/python
 #
-FROM python:3.9-slim-buster
+FROM python:3.10-slim-bullseye
 LABEL maintainer="isometimescode@users.noreply.github.com"
 
-ARG ANSIBLE_VERSION=3.3.0
+ARG ANSIBLE_VERSION=6.0.0
 ARG PLAYBOOK_DIR=/playbook
 ENV ANSIBLE_CONFIG="${PLAYBOOK_DIR}/ansible.cfg"
 
